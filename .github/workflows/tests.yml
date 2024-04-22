@@ -16,6 +16,13 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
 
+      - name: Set the Kubernetes context
+        uses: azure/k8s-set-context@v2
+        with:
+          method: service-account
+          k8s-url: <server-url>
+          k8s-secret: ${{ secrets.KUBERNETES_SECRET }}  
+
       - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
