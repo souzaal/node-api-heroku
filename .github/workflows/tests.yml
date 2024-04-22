@@ -21,7 +21,7 @@ jobs:
         with:
           method: service-account
          #k8s-url: ${{ secrets.SERVER_URL }}
-          k8s-secret: ${{ secrets.KUBERNETES_SECRET }}  
+          #k8s-secret: ${{ secrets.KUBERNETES_SECRET }}  
 
       - name: Setup Node.js
         uses: actions/setup-node@v1
